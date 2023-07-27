@@ -19,4 +19,6 @@ Image Patcher UI is a versatile utility designed to aid graphic designers, game 
 5. **Scale:** Select the scale for the low-resolution versions. This field is ignored if no Low-Res Output Folder is specified.
 6. Click the **Process** button to start the process.
 
-[!](preview.png)
+<p align="center">
+  <img alt="Preview" src="./preview.png">
+</p>
