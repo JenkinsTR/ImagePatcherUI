@@ -1,0 +1,8 @@
+{
+    "files": [
+        "imagepatcherui.py",
+        "form.ui",
+        "imagepatcherui.qrc",
+        "build.py"
+    ]
+}

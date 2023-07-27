@@ -1,0 +1,7 @@
+
+ImagePatcherUI/build/
+ImagePatcherUI/dist/
+ImagePatcherUI/venv/
+ImagePatcherUI/.ropeproject/
+ImagePatcherUI/__pycache__/
+

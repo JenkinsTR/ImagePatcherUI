@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/JMDigital.png</file>
+        <file>images/imagepatcherui.ico</file>
+    </qresource>
+</RCC>
