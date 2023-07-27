@@ -96,15 +96,16 @@ class ImageProcessor(QObject):
                                                 f"{os.path.splitext(os.path.basename(file))[0]}_{i}_{j}.png")
                         cropped.save(output_file)
 
-                        try:
-                            # Resize for low-resolution
-                            new_size = patch_size // resize_scale
-                            if new_size <= 0:
-                                logging.warning(f"new_size is {new_size}, check resize_scale value.")
-                            low_res = cropped.resize((new_size, new_size), Image.LANCZOS)
-                            low_res.save(os.path.join(dest_path_low_res, f"{os.path.splitext(os.path.basename(file))[0]}_{i}_{j}.png"))
-                        except Exception as e:
-                            logging.error(f"Failed to process low-res image for file {file} with error {e}")
+                        if dest_path_low_res:  # Check if this string is not empty
+                            try:
+                                # Resize for low-resolution
+                                new_size = patch_size // resize_scale
+                                if new_size <= 0:
+                                    logging.warning(f"new_size is {new_size}, check resize_scale value.")
+                                low_res = cropped.resize((new_size, new_size), Image.LANCZOS)
+                                low_res.save(os.path.join(dest_path_low_res, f"{os.path.splitext(os.path.basename(file))[0]}_{i}_{j}.png"))
+                            except Exception as e:
+                                logging.error(f"Failed to process low-res image for file {file} with error {e}")
 
                     with counter_lock:  # Lock the counter while updating it
                         processed_images_counter.value += 1
@@ -162,7 +163,7 @@ class ImagePatcherUI(QWidget):
         try:
             source_path = self.ui.sourceLineEdit.text()
             dest_path = self.ui.outputLineEdit.text()
-            dest_path_low_res = self.ui.lowResOutputLineEdit.text()
+            dest_path_low_res = self.ui.lowResOutputLineEdit.text().strip()
             patch_size = int(self.ui.patchSizeText.toPlainText())
             scale_text = self.ui.comboBoxScale.currentText()
             resize_scale = int(scale_text.strip("x"))

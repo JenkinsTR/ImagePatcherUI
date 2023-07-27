@@ -63,6 +63,9 @@
      <height>32</height>
     </rect>
    </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This output folder will contain your high resolution &amp;quot;Patches&amp;quot;, sometimes referred to as &amp;quot;Ground Truth&amp;quot; images to be used in Neural Network training.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
    <property name="placeholderText">
     <string>This is your output folder containing the full size patched images</string>
    </property>
@@ -75,6 +78,9 @@
      <width>430</width>
      <height>32</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This is the output folder for low resolution &amp;quot;scaled&amp;quot; versions of the patches, useful in Neural Network training.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="placeholderText">
     <string>This is your output folder containing the scaled Low-Res size patched images</string>
@@ -166,7 +172,7 @@
     <rect>
      <x>20</x>
      <y>250</y>
-     <width>300</width>
+     <width>431</width>
      <height>32</height>
     </rect>
    </property>
@@ -176,7 +182,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Output Low-Res Folder:</string>
+    <string>Output Low-Res Folder: (optional)</string>
    </property>
    <property name="textInteractionFlags">
     <set>Qt::NoTextInteraction</set>
@@ -233,6 +239,9 @@
      <height>32</height>
     </rect>
    </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;How much to scale down the Patches.&lt;/p&gt;&lt;p&gt;E.G: if you chose 512 for the Patch Size, then choosing 4x here will produce 128px Low-Res versions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
    <property name="currentIndex">
     <number>1</number>
    </property>
@@ -265,6 +274,9 @@
      <width>121</width>
      <height>32</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This can be any pixel size that is smaller than your smallest Source images&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="statusTip">
     <string/>
