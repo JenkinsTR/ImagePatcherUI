@@ -7,6 +7,11 @@
 ## Overview
 Image Patcher UI is a versatile utility designed to aid graphic designers, game developers and Neural Network trainers in preparing their graphical assets. This program accepts a batch of high-resolution images, automatically crops them into smaller patches of a specified size, and outputs both the original patches and optional low-resolution versions to folders you specify.
 
+## Rquirements
+**None!**
+
+This program was compiled using *pyinstaller* and has all requirements built-in, so you don't even need Python installed to run it :)
+
 ## Features
 
 - **Batch Image Processing:** Image Patcher UI can handle large batches of images at once, making it ideal for handling game textures, sprites, photography, or any graphical assets.
